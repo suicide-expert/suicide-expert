@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import Aura from '@primeuix/themes/aura'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -23,8 +25,12 @@ export default defineNuxtConfig({
     options: {
       ripple: true,
       theme: {
+        preset: Aura,
         options: { darkModeSelector: '.dark' }
       }
     }
-  }
+  },
+  css: [
+    'primeicons/primeicons.css'
+  ]
 })

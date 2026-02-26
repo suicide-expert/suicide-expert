@@ -45,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({ layout: 'auth' })
 const supabase = useSupabaseClient()
 
 const mode = ref<'login' | 'signup'>('login')
